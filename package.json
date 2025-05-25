@@ -1,0 +1,40 @@
+{
+  "name": "cheryglsljs",
+  "version": "1.1.7",
+  "description": "A Three.js + GLSL-based wave effect library.",
+  "main": "dist/cherry.js",
+"module": "dist/cherry.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shivam-070208/cheryjs.git"
+  },
+  "author": "@shivamGupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shivam-070208/cheryjs/issues"
+  },
+  "homepage": "https://github.com/shivam-070208/cheryjs#readme",
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "three": "^0.176.0"
+  },
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "glsl-shader-loader": "^0.1.6",
+    "mini-css-extract-plugin": "^2.7.6",
+    "raw-loader": "^4.0.2",
+    "terser-webpack-plugin": "^5.3.9",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "files": [
+    "dist/",
+    "src/"
+  ]
+}
