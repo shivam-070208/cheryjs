@@ -1,13 +1,12 @@
 import createWaveAssets from "../../utils/init.js";
 import fragmentShader from "./FragementShader.glsl.js";
 import vertexShader from "./VertexShader.glsl.js";
-// Make sure the file 'FragmentShader.glsl.js' exists in the same directory as this file.
-// If the file is named differently or located elsewhere, update the import path accordingly.
-// Example: import fragmentShader from '../../shaders/FragmentShader.glsl.js';
+import gsap from "gsap";
+import *as THREE from 'three';
 
 export function ImageTransition1(
   container,
-  { speed = 0.02, strength = 0.02, radius = 0.02, hover = false,noise=0.4 } = {}
+  { speed = 0.02, strength = 0.02, radius = 0.02, hover = false,noise=0.4,p=0.0 } = {}
 ) {
   let image = Array.from(container.querySelectorAll("img"));
   if (!image.length) {
@@ -44,7 +43,7 @@ export function ImageTransition1(
   // Set camera to frame a 2x2 unit square
   waveassets.camera.fov =
     2 * Math.atan(container.clientHeight / 2 / 600) * (180 / Math.PI);
-  waveassets.camera.position.z = 2.8;
+  waveassets.camera.position.z = 2.8 +p;
 
   let mesh;
 

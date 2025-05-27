@@ -1,4 +1,4 @@
-
+import *as THREE from 'three';
 const Scene = () => new THREE.Scene();
 const camera = () => new THREE.PerspectiveCamera(
     75,
@@ -7,7 +7,7 @@ const camera = () => new THREE.PerspectiveCamera(
     1000
 );
 
-const renderer = () => new THREE.WebGLRenderer({alpha:false});
+const renderer = () => new THREE.WebGLRenderer({alpha:true});
 
 export default function createWaveAssets(width = 400, height = 400) {
     const SceneInstance = Scene();

@@ -2,8 +2,10 @@
 import createWaveAssets from '../../utils/init.js';
 import fragmentShader from './FragementShader.glsl.js';
 import vertexShader from './Vertexshader.glsl.js';
+import gsap from 'gsap';
+import *as THREE from 'three';
 
-const CherryWave = ({ container, image, speed = 0.05, strength = 0.02, hover = false,light }) => {
+const CherryWave = ({ container, image, speed = 0.05, strength = 0.02, hover = false,light,p=0.0 }) => {
   if (!image) {
     console.log("No image provided");
     return;
@@ -25,7 +27,7 @@ const CherryWave = ({ container, image, speed = 0.05, strength = 0.02, hover = f
 
     // Set camera to frame a 2x2 unit square
     waveassets.camera.fov = 2 * Math.atan(container.clientHeight / 2 / 600) * (180 / Math.PI);
-    waveassets.camera.position.z = 2.8;
+    waveassets.camera.position.z = 2.8 -p;
 
     let mesh;
 

@@ -26,10 +26,7 @@ module.exports = {
       }
     ]
   },
-  externals: {
-    three: 'THREE',                    
-    gsap: 'gsap'
-  },
+ 
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css'
