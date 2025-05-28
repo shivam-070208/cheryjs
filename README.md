@@ -44,7 +44,7 @@ A lightweight JavaScript library for beautiful, interactive image effects using 
 
 2. Import in your JavaScript:
    ```js
-   import Cherryglsl from 'cheryglsljs';
+   import * as Cherryglsl from 'cheryglsljs';
    // or import { CherryWave, ImageTransition1, ImageTransition2 } from 'cheryglsljs';
    ```
 
